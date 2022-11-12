@@ -21,28 +21,25 @@ public class ClientRepositoryImpl implements ClientRepository {
         return instance;
     }
 
-    @Override
     public Client find(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        int clientPosition = clients.indexOf(client);
+        return clients.get(clientPosition);
     }
 
-    @Override
     public Client add(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        clients.add(client);
+        return client;
     }
 
-    @Override
     public Client update(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        Client persistedClient = find(client);
+        persistedClient = client;
+        return persistedClient;
     }
 
-    @Override
     public Client remove(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        clients.remove(client);
+        return client;
     }
     
 }

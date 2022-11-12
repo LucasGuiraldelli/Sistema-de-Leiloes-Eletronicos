@@ -3,13 +3,9 @@ package br.gov.sp.fatec.onlineAuction.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.gov.sp.fatec.onlineAuction.model.Product;
-import br.gov.sp.fatec.onlineAuction.model.Realty;
-import br.gov.sp.fatec.onlineAuction.model.RealtyType;
-import br.gov.sp.fatec.onlineAuction.model.Vehicle;
-import br.gov.sp.fatec.onlineAuction.model.VehicleType;
+import br.gov.sp.fatec.onlineAuction.model.Product.Product;
 
-public class ProductRepositoryImpl implements RealtyRepository, VehicleRepository{
+public class ProductRepositoryImpl implements ProductRepository{
 
     private static ProductRepositoryImpl instance;
 
@@ -32,15 +28,6 @@ public class ProductRepositoryImpl implements RealtyRepository, VehicleRepositor
     }
 
     @Override
-    public Product findByWord(String word) {
-        for(Product p: products){
-            
-        }
-
-        return null;
-    }
-
-    @Override
     public Product findByPrice(Double min, Double max) {
         // TODO Auto-generated method stub
         return null;
@@ -59,13 +46,13 @@ public class ProductRepositoryImpl implements RealtyRepository, VehicleRepositor
     }
 
     @Override
-    public Vehicle findByType(VehicleType type) {
+    public Product findByWord(String word) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public Realty findByType(RealtyType type) {
+    public Product findByType(String type) {
         // TODO Auto-generated method stub
         return null;
     }

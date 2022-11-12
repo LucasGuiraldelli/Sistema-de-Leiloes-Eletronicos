@@ -24,4 +24,11 @@ public class ClientTeste {
 
         assertEquals(client, clientList.get(clientList.indexOf(client2)));
     }
+
+    // @Test
+    // public void createClientWithoutCPFShouldBeNull(){
+    //     Client client = new Client();
+
+    //     assertNull(client);
+    // }
 }
