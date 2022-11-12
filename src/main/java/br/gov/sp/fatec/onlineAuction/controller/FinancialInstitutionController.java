@@ -31,7 +31,7 @@ public class FinancialInstitutionController implements JavalinController{
         if(cnpjQuery != null){
             FinancialInstitution financialInstitution = new FinancialInstitution();
             financialInstitution.setCnpj(cnpjQuery);
-    
+            
             financialInstitution = financialInstitutionService.getFinancialInstitution(financialInstitution);
     
             responseJson.put("cnpj", financialInstitution.getCnpj());
@@ -65,6 +65,22 @@ public class FinancialInstitutionController implements JavalinController{
         financialInstitution.setTradingName(requestJson.getString("nomeFantasia"));
 
         financialInstitution = financialInstitutionService.addFinancialInstitution(financialInstitution);
+        
+        JSONObject responseJson = new JSONObject("{}");
+        responseJson.put("cnpj", financialInstitution.getCnpj());
+        responseJson.put("razaoSocial", financialInstitution.getCompanyName());
+        responseJson.put("nomeFantasia", financialInstitution.getTradingName());
+
+        ctx.json(responseJson.toString());
+    }
+
+    public void deleteFinancialInstitution(Context ctx){
+        JSONObject requestJson = new JSONObject(ctx.body());
+
+        FinancialInstitution financialInstitution = new FinancialInstitution();
+        financialInstitution.setCnpj(requestJson.getString("cnpj"));
+
+        financialInstitution = financialInstitutionService.removeFinancialInstitution(financialInstitution);
         
         JSONObject responseJson = new JSONObject("{}");
         responseJson.put("cnpj", financialInstitution.getCnpj());
