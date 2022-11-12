@@ -13,7 +13,7 @@ comerciais) e veículos (carros e motocicletas de passeio) apreendidos.
 
 ## Instruções de build e usabilidade
 
-Para executar as funcionalidade básicas do projeto, basta (com o java instalado): 
+Para executar as funcionalidade básicas do projeto, basta (com o java 11 instalado): 
    * clonar o repositório;
    * abrir o projeto em sua IDE, utilizando a opção de importar usando maven;
    * Rodar o comando `mvn install` para instalar as dependências necessárias para utilizar o projeto;
