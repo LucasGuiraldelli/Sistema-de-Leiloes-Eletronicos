@@ -1,5 +1,7 @@
 package br.gov.sp.fatec.onlineAuction.service;
 
+import java.util.List;
+
 import br.gov.sp.fatec.onlineAuction.model.Product.Product;
 import br.gov.sp.fatec.onlineAuction.repository.ProductRepository;
 import br.gov.sp.fatec.onlineAuction.repository.ProductRepositoryImpl;
@@ -12,28 +14,25 @@ public class ProductServiceImpl implements ProductService {
         productRepository = ProductRepositoryImpl.getInstance();
     }
 
-    @Override
     public Product getProduct(Product product) {
-        // TODO Auto-generated method stub
-        return null;
+        return productRepository.find(product);
     }
 
-    @Override
     public Product addProduct(Product product) {
-        // TODO Auto-generated method stub
-        return null;
+        return productRepository.add(product);
     }
 
-    @Override
     public Product updateProduct(Product product) {
-        // TODO Auto-generated method stub
-        return null;
+        return productRepository.update(product);
+    }
+
+    public Product removeProduct(Product product) {
+        return productRepository.remove(product);
     }
 
     @Override
-    public Product removeProduct(Product product) {
-        // TODO Auto-generated method stub
-        return null;
+    public List<Product> listProduct(Product product) {
+        return productRepository.findAll();
     }
     
 }

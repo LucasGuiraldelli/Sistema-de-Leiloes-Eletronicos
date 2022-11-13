@@ -27,13 +27,11 @@ public class FinancialInstitutionServiceImpl implements FinancialInstitutionServ
     }
 
     public FinancialInstitution updateFinancialInstitution(FinancialInstitution financialInstitution) {
-        // TODO Auto-generated method stub
-        return null;
+        return financialInstitutionRepository.update(financialInstitution);
     }
 
     public FinancialInstitution removeFinancialInstitution(FinancialInstitution financialInstitution) {
-        // TODO Auto-generated method stub
-        return null;
+        return financialInstitutionRepository.remove(financialInstitution);
     }
     
 }

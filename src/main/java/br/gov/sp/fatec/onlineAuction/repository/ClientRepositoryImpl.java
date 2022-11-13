@@ -41,5 +41,9 @@ public class ClientRepositoryImpl implements ClientRepository {
         clients.remove(client);
         return client;
     }
+
+    public List<Client> findAll() {
+        return clients;
+    }
     
 }

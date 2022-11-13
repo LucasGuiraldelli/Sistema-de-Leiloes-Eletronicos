@@ -13,6 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Product {
     
+    private Long id;
     private String name;
     private String description;
     private Long initialPrice;
@@ -30,7 +31,7 @@ public class Product {
 
             Product p = (Product) o;
 
-        return p.getName().equals(this.getName()) && p.getAuction().equals(this.getAuction());
+        return p.getId().equals(id);
     }
 
 }

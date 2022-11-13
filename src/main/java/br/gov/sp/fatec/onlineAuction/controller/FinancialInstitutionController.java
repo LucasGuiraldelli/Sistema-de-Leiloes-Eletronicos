@@ -22,6 +22,7 @@ public class FinancialInstitutionController implements JavalinController{
     public void configure(Javalin app) {
         app.get(basePath, this::getFinancialInstitution);
         app.post(basePath, this::postFinancialInstitution);
+        app.delete(basePath, this::deleteFinancialInstitution);
     }
 
     public void getFinancialInstitution(Context ctx){

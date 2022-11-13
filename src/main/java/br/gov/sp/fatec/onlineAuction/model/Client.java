@@ -22,7 +22,7 @@ public class Client {
 
         Client c = (Client) o;
 
-        return c.getCpf().equals(this.getCpf());
+        return c.getCpf().equals(cpf);
     }
 
 }

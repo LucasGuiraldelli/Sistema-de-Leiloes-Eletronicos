@@ -30,7 +30,7 @@ public class Auction {
 
             Auction a = (Auction) o;
 
-        return a.getId().equals(this.getId());
+        return a.getId().equals(id);
     }
 
 }

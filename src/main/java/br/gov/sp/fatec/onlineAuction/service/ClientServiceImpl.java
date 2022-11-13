@@ -1,31 +1,37 @@
 package br.gov.sp.fatec.onlineAuction.service;
 
+import java.util.List;
+
 import br.gov.sp.fatec.onlineAuction.model.Client;
+import br.gov.sp.fatec.onlineAuction.repository.ClientRepository;
+import br.gov.sp.fatec.onlineAuction.repository.ClientRepositoryImpl;
 
 public class ClientServiceImpl implements ClientService{
 
-    @Override
+    ClientRepository clientRepository;
+
+    public ClientServiceImpl(){
+        clientRepository = ClientRepositoryImpl.getInstance();
+    }
+
+    public List<Client> listClient() {
+        return clientRepository.findAll();
+    }
+
     public Client getClient(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        return clientRepository.find(client);
     }
 
-    @Override
     public Client addClient(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        return clientRepository.add(client);
     }
 
-    @Override
     public Client updateClient(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        return clientRepository.update(client);
     }
 
-    @Override
     public Client removeClient(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        return clientRepository.remove(client);
     }
     
 }

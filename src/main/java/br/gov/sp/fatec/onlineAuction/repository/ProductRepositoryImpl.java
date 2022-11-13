@@ -9,6 +9,7 @@ public class ProductRepositoryImpl implements ProductRepository{
 
     private static ProductRepositoryImpl instance;
 
+    private Long productId = 0l; 
     private List<Product> products;
 
     private ProductRepositoryImpl(){
@@ -21,38 +22,28 @@ public class ProductRepositoryImpl implements ProductRepository{
         return instance;
     }
 
-    @Override
     public Product find(Product product) {
         int productPosition = products.indexOf(product);
         return products.get(productPosition);
     }
 
-    @Override
-    public Product findByPrice(Double min, Double max) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
     public Product add(Product product) {
-        // TODO Auto-generated method stub
-        return null;
+        product.setId(++productId);
+        products.add(product);
+        return product;
     }
 
-    @Override
     public Product remove(Product product) {
-        // TODO Auto-generated method stub
-        return null;
+        products.remove(product);
+        return product;
+    }
+
+    public List<Product> findAll() {
+        return products;
     }
 
     @Override
-    public Product findByWord(String word) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Product findByType(String type) {
+    public Product update(Product product) {
         // TODO Auto-generated method stub
         return null;
     }

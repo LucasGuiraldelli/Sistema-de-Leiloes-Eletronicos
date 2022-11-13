@@ -23,7 +23,7 @@ public class FinancialInstitution {
 
             FinancialInstitution f = (FinancialInstitution) o;
 
-        return f.getCnpj().equals(this.getCnpj());
+        return f.getCnpj().equals(cnpj);
     }
     
 }

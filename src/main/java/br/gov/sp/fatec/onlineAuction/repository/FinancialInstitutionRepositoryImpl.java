@@ -35,16 +35,15 @@ public class FinancialInstitutionRepositoryImpl implements FinancialInstitutionR
         return financialInstitution;
     }
 
-    @Override
     public FinancialInstitution update(FinancialInstitution financialInstitution) {
-        // TODO Auto-generated method stub
-        return null;
+        FinancialInstitution persistedfinancialInstitution = find(financialInstitution);
+        persistedfinancialInstitution = financialInstitution;
+        return persistedfinancialInstitution;
     }
 
-    @Override
     public FinancialInstitution remove(FinancialInstitution financialInstitution) {
-        // TODO Auto-generated method stub
-        return null;
+        financialInstitutions.remove(financialInstitution);
+        return financialInstitution;
     }
     
 }
