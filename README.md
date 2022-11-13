@@ -18,5 +18,5 @@ Para executar as funcionalidade básicas do projeto, basta (com o java 11 instal
    * abrir o projeto em sua IDE, utilizando a opção de importar usando maven;
    * Rodar o comando `mvn install` para instalar as dependências necessárias para utilizar o projeto;
 
-   * Após seguido todos os passo acima, basta executar o arquivo `App.java` e o `MainUI.java` pra acessar a interface do usuário.
+   * Após seguido todos os passo acima, basta executar o arquivo `onlineAuction/App.java` e então o `UI/MainUI.java` pra acessar a interface do usuário.
    
